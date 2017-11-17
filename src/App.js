@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { compose, createStore } from 'redux'
 import { reactReduxFirebase } from 'react-redux-firebase'
+import { Provider } from 'react-redux'
 import firebaseConfig from './firebase-config'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
@@ -28,12 +29,14 @@ const store = createStoreWithFirebase(rootReducer, initialState)
 class App extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <Route exact path="/" component={IndexView} />
-                    <Route path="/:id" component={EditorView} />
-                </div>
-            </Router>
+            <Provider store={store}>
+                <Router>
+                    <div>
+                        <Route exact path="/" component={IndexView} />
+                        <Route path="/:id" component={EditorView} />
+                    </div>
+                </Router>
+            </Provider>
         )
     }
 }
