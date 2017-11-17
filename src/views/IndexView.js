@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import uuidv4 from 'uuid/v4'
 
 class IndexView extends Component {
+    constructor(props) {
+        super(props)
+        this.newEditor = this.newEditor.bind(this)
+    }
+
     render() {
         return (
             <div
@@ -24,13 +30,16 @@ class IndexView extends Component {
                         maxWidth: '50%'
                     }}
                 >
-                    <Link to="/">
-                        <button>NEW EDITOR</button>
-                    </Link>
+                    <button onClick={this.newEditor}>NEW EDITOR</button>
                 </div>
             </div>
         )
     }
+
+    newEditor() {
+        const { history } = this.props
+        history.push('/' + uuidv4())
+    }
 }
 
-export default IndexView
+export default withRouter(IndexView)
