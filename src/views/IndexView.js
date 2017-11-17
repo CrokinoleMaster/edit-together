@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class IndexView extends Component {
     render() {
-        return <p>Index View</p>
+        return <h1>Code Together</h1>
     }
 }
 
