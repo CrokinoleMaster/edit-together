@@ -90,7 +90,7 @@ class EditorView extends Component {
                         enableLiveAutocompletion: false,
                         enableSnippets: false,
                         showLineNumbers: true,
-                        tabSize: 2
+                        tabSize: 4
                     }}
                 />
             </div>
