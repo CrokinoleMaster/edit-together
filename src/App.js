@@ -4,7 +4,7 @@ import { reactReduxFirebase } from 'react-redux-firebase'
 import { Provider } from 'react-redux'
 import firebaseConfig from './firebase-config'
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Link,
     Redirect,
