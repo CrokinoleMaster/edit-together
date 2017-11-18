@@ -38,7 +38,7 @@ class IndexView extends Component {
 
     newEditor() {
         const { history } = this.props
-        history.push('/' + uuidv4())
+        history.push('/edit-together/' + uuidv4())
     }
 }
 

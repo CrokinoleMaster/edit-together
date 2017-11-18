@@ -36,15 +36,21 @@ class EditorView extends Component {
         super(props)
         this.onChangeText = this.onChangeText.bind(this)
         this.setMode = this.setMode.bind(this)
+        this._getID = this._getID.bind(this)
         this.state = {
             mode: 'javascript'
         }
     }
 
+    _getID() {
+        const { location } = this.props
+        return location.pathname.slice('/edit-together'.length + 1)
+    }
+
     render() {
-        const { location, editors } = this.props
+        const { editors } = this.props
         const { mode } = this.state
-        const id = location.pathname.slice(1)
+        const id = this._getID()
 
         return (
             <div>
@@ -98,15 +104,15 @@ class EditorView extends Component {
     }
 
     onChangeText(newValue) {
-        const { location, firebase } = this.props
-        const id = location.pathname.slice(1)
+        const { firebase } = this.props
+        const id = this._getID()
         firebase.set(`editors/${id}`, newValue)
     }
 }
 
 export default compose(
     firebaseConnect(props => {
-        const id = props.location.pathname.slice(1)
+        const id = props.location.pathname.slice('/edit-together'.length + 1)
         return [`editors/${id}`]
     }),
     connect(({ firebase }) => ({

@@ -3,7 +3,13 @@ import { compose, createStore } from 'redux'
 import { reactReduxFirebase } from 'react-redux-firebase'
 import { Provider } from 'react-redux'
 import firebaseConfig from './firebase-config'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Redirect,
+    Switch
+} from 'react-router-dom'
 
 import rootReducer from './reducer'
 import IndexView from './views/IndexView'
@@ -32,8 +38,23 @@ class App extends Component {
             <Provider store={store}>
                 <Router>
                     <div>
-                        <Route exact path="/" component={IndexView} />
-                        <Route path="/:id" component={EditorView} />
+                        <Switch>
+                            <Route exact path="/">
+                                <Redirect to="/edit-together" />
+                            </Route>
+                            <Route
+                                exact
+                                path="/edit-together"
+                                component={IndexView}
+                            />
+                            <Route
+                                path="/edit-together/:id"
+                                component={EditorView}
+                            />
+                            <Route path="**">
+                                <Redirect to="/edit-together" />
+                            </Route>
+                        </Switch>
                     </div>
                 </Router>
             </Provider>
