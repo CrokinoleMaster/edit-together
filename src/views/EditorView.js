@@ -67,7 +67,8 @@ class EditorView extends Component {
                 </div>
                 <AceEditor
                     style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '680px'
                     }}
                     mode={mode}
                     theme="monokai"
@@ -79,8 +80,8 @@ class EditorView extends Component {
                     highlightActiveLine={true}
                     value={editors[id] || ''}
                     setOptions={{
-                        enableBasicAutocompletion: true,
-                        enableLiveAutocompletion: true,
+                        enableBasicAutocompletion: false,
+                        enableLiveAutocompletion: false,
                         enableSnippets: false,
                         showLineNumbers: true,
                         tabSize: 2
