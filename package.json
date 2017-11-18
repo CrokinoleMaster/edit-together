@@ -1,22 +1,23 @@
 {
-  "name": "edit-together",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.1.1",
-    "react-ace": "^5.5.0",
-    "react-dom": "^16.1.1",
-    "react-redux": "^5.0.6",
-    "react-redux-firebase": "^1.5.1",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "uuid": "^3.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "name": "edit-together",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^16.1.1",
+        "react-ace": "^5.5.0",
+        "react-dom": "^16.1.1",
+        "react-redux": "^5.0.6",
+        "react-redux-firebase": "^1.5.1",
+        "react-router-dom": "^4.2.2",
+        "react-scripts": "1.0.17",
+        "redux": "^3.7.2",
+        "uuid": "^3.1.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "homepage": "https://huaruiwu.github.io/edit-together"
 }
