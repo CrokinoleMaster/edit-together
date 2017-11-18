@@ -112,7 +112,7 @@ class EditorView extends Component {
 
 export default compose(
     firebaseConnect(props => {
-        const id = props.location.pathname.slice('/edit-together'.length + 1)
+        const id = props.location.pathname.slice(1)
         return [`editors/${id}`]
     }),
     connect(({ firebase }) => ({
