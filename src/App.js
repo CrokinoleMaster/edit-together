@@ -39,20 +39,10 @@ class App extends Component {
                 <Router>
                     <div>
                         <Switch>
-                            <Route exact path="/">
-                                <Redirect to="/edit-together" />
-                            </Route>
-                            <Route
-                                exact
-                                path="/edit-together"
-                                component={IndexView}
-                            />
-                            <Route
-                                path="/edit-together/:id"
-                                component={EditorView}
-                            />
+                            <Route exact path="/" component={IndexView} />
+                            <Route path="/:id" component={EditorView} />
                             <Route path="**">
-                                <Redirect to="/edit-together" />
+                                <Redirect to="/" />
                             </Route>
                         </Switch>
                     </div>

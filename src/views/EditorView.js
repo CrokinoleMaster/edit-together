@@ -44,7 +44,7 @@ class EditorView extends Component {
 
     _getID() {
         const { location } = this.props
-        return location.pathname.slice('/edit-together'.length + 1)
+        return location.pathname.slice(1)
     }
 
     render() {
