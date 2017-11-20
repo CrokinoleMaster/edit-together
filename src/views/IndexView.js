@@ -15,7 +15,7 @@ class IndexView extends Component {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginTop: '50%'
+                    height: '100vh'
                 }}
             >
                 <div
