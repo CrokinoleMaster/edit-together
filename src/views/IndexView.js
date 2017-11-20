@@ -20,16 +20,14 @@ class IndexView extends Component {
             >
                 <div
                     style={{
-                        maxWidth: '50%'
+                        textAlign: 'right',
+                        paddingRight: '10rem'
                     }}
                 >
-                    <h1>Code Together</h1>
+                    <h1>Edit Together</h1>
+                    <p>Simple online collab editor</p>
                 </div>
-                <div
-                    style={{
-                        maxWidth: '50%'
-                    }}
-                >
+                <div>
                     <button onClick={this.newEditor}>NEW EDITOR</button>
                 </div>
             </div>
