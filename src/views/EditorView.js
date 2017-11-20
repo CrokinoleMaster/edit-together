@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { firebase, firebaseConnect, dataToJS } from 'react-redux-firebase'
+import { Link } from 'react-router-dom'
 import { compose } from 'redux'
 import brace from 'brace'
 import AceEditor from 'react-ace'
@@ -54,6 +55,9 @@ class EditorView extends Component {
 
         return (
             <div>
+                <Link to="/">
+                    <h4>Edit Together</h4>
+                </Link>
                 <div className="field">
                     <p className="control">
                         <span className="select">
